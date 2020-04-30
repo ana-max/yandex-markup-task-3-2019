@@ -1,0 +1,806 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=cyrillic');
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font: 81.25% Arial, Helvetica, sans-serif;
+}
+
+.grid-container
+{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 170px auto 200px;
+    grid-template-rows: 56px max-content 110px auto 41px;
+    grid-gap: 8px 14px;
+
+}
+
+/* Начало стилей шапки страницы */
+
+.header
+{
+    grid-column: 1/4;
+    grid-row: 1/2;
+    display: flex;
+    height: 42px;
+    margin: 8px 200px 0 0;
+    padding: 0 18px;
+}
+
+.header__link
+{
+    display: inline-flex;
+    margin-right: 16px;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+}
+
+.header__link:first-of-type::before
+{
+    content: '';
+    background: url('black-plane.svg') no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-top: -2px;
+    margin-right: 3px;
+}
+
+.header__link:first-of-type:hover::before
+{
+    background: url('red-plane.svg') no-repeat;
+}
+
+.header__link:last-of-type
+{
+    color: #999;
+}
+
+.header__link:hover
+{
+    color: #f00;
+}
+/* Конец стилей шапки страницы */
+
+/* Начало стилей для виджета почты */
+
+.email-visibility
+{
+    display: none;
+}
+
+.email-visibility__control,
+.email-widget
+{
+    grid-column: 3/4;
+    grid-row: 1/3;
+    transition: height .3s ease-out;
+    overflow: hidden;
+}
+
+.email-visibility:checked ~ .email-widget,
+.email-visibility:checked ~ .email-visibility__control
+{
+    height: 70px;
+}
+
+.email-visibility:checked ~ .email-widget .toggle,
+.email-visibility:checked ~ .email-widget .user__icon,
+.email-visibility:checked ~ .email-widget .icon__border
+{
+    display: none;
+}
+
+.email-visibility:checked ~ .email-widget .user__name
+{
+    margin-bottom: 10px;
+}
+
+.email-visibility__control
+{
+    height: 128px;
+    width: 180px;
+    z-index: 2;
+}
+
+.email-widget
+{
+    width: 180px;
+    height: 128px;
+    margin: 0 10px 8px 0;
+    padding: 12px 10px;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.1);
+    box-sizing: border-box;
+}
+
+.email-widget:target
+{
+    height: 40px;
+    overflow: hidden;
+}
+
+.messages-status
+{
+    opacity: .5;
+}
+
+.toggle
+{
+    display: block;
+}
+
+.toggle__write,
+.toggle__disk,
+.email-widget__messages
+{
+    margin-bottom: 10px;
+}
+
+.user
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.user__name
+{
+    font-weight: 600;
+}
+
+.user__name::first-letter
+{
+    color: #f00;
+    margin-bottom: 16px;
+}
+
+.user__icon
+{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+}
+
+.icon__border
+{
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: -60px;
+    padding: 2px;
+    margin-top: -2px;
+    background: transparent;
+    border: 2px solid #0054b9;
+    border-top: 2px solid #ffa500;
+    border-right: 2px solid #ffdb4d;
+    z-index: -1;
+    transform: rotate(45deg);
+    border-radius: 50%;
+}
+
+/* Конец стилей виджета почты */
+
+.widgets-list
+{
+    grid-row: 4/5;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 20px;
+    margin-top: 20px;
+}
+
+.weather-widget
+{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.traffic-jams-widget
+{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.map-widget
+{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.popular-widget
+{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.tv-program-widget
+{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.ether-widget
+{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.widget__header
+{
+    display: inline-block;
+    color: #0054b9;
+    font-size: 120%;
+    font-weight: 600;
+    margin: 4px 0 8px;
+}
+
+.widget__header:hover
+{
+    color: #f00;
+}
+
+.widget__input
+{
+    display: none;
+}
+
+.widget__input:checked ~ .widget__folding
+{
+    transform: rotate(360deg);
+}
+
+.widget__input:checked ~ .widget__folding-text
+{
+    display: block;
+}
+
+.widget__input:checked ~ .widget__not-folding-area
+{
+    display: none;
+}
+
+.widget__not-folding-area
+{
+    display: flex;
+}
+
+.traffic-jams-widget__icon,
+.weather-widget__icon
+{
+    display: inline-flex;
+    width: 35px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+.traffic-jams-widget__icon
+{
+    background: url('jams.svg') no-repeat;
+}
+
+.weather-widget__icon
+{
+    background: url('weather-icon.svg') no-repeat;
+}
+
+.traffic-mark,
+.weather-mark
+{
+    font-size: 28px;
+    margin-right: 16px;
+}
+
+.traffic-description,
+.weather-description
+{
+    color: #000;
+}
+
+.traffic-description:hover,
+.traffic-mark:hover,
+.weather-mark:hover,
+.weather-description:hover,
+.map-widget-nav-list__item:hover,
+.service:hover
+{
+    color: #f00;
+}
+
+.widget__folding
+{
+    display: inline-flex;
+    background: url('gray-fold.svg') no-repeat;
+    height: 16px;
+    width: 16px;
+    transform: rotate(180deg);
+    transition: transform .3s ease-out;
+}
+
+.widget__input:checked ~ .widget__folding
+{
+    transform: rotate(360deg);
+}
+
+.widget__folding-text
+{
+    color: #000;
+    opacity: .4;
+    display: none;
+}
+
+.widget__folding:hover
+{
+    background: url('black-fold.svg') no-repeat;
+}
+
+.map-widget-nav-list
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.map-widget-nav-list__item
+{
+    color: #000;
+    list-style-type: none;
+    margin: 0 13px 8px 0;
+}
+
+.popular-widget-nav-list,
+.tv-program-widget-nav-list
+{
+    margin: 0;
+    padding: 0;
+}
+
+.popular-widget-nav-list__item,
+.tv-program-widget-nav-list__item
+{
+    color: #000;
+    list-style-type: none;
+    line-height: 1.8;
+}
+
+.ether:checked ~ .hidden-ether-widget__header
+{
+    display: inline;
+}
+
+.ether:checked ~ .ether-widget__header
+{
+    display: none;
+}
+
+.either-list-item::before
+{
+    content: '';
+    display: inline-block;
+    background: url('ether.svg') no-repeat;
+    width: 13px;
+    height: 13px;
+    margin-left: -13px;
+}
+
+.hidden-ether-widget__header
+{
+    display: none;
+}
+
+.service
+{
+    font-weight: bold;
+}
+
+.tv-type
+{
+    opacity: .5;
+}
+
+.chanel
+{
+    opacity: .4;
+}
+
+/* Начало стилей футера */
+
+.footer
+{
+    margin-top: 100px;
+    height: 41px;
+    background: #f0f0f0;
+    grid-row: 5/6;
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: auto 60px;
+    align-items: center;
+}
+
+.footer__nav
+{
+    grid-column: 1/2;
+}
+
+.footer-nav-list
+{
+    display: flex;
+    padding-left: 18px;
+    margin-left: 0;
+}
+
+.footer-nav-list__item
+{
+    list-style-type: none;
+    color: #999;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.footer-nav-list__item:hover,
+.footer__copyright:hover
+{
+    color: #f00;
+}
+
+.footer__copyright
+{
+    grid-column: 2/3;
+    color: #999;
+}
+
+/* Конец стилей футера */
+
+/* Начало стилей логотипа Яндекса */
+
+.yandex-logo
+{
+    grid-row: 3/4;
+    grid-column: 1/2;
+    padding-left: 38px;
+}
+/* Конец стилей логотипа Яндекса */
+
+/* Начало стилей полосы поиска */
+
+.search
+{
+    grid-row: 3/4;
+    grid-column: 2/3;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-nav-list
+{
+    grid-row: 2/3;
+    display: flex;
+    padding: 0;
+    margin-top: 0;
+}
+
+.search__input
+{
+    background: url('microvawe.svg') no-repeat calc(100% - 45px) 5px, #fff url('keyboard.svg') no-repeat calc(100% - 10px) 10px;
+    width: 30px;
+    height: 24px;
+}
+
+.search-nav-list__item
+{
+    list-style-type: none;
+    margin-right: 20px;
+    color: #0054b9;
+    font-size: 120%;
+}
+
+.search-nav-list__item:hover
+{
+    color: red;
+}
+
+.search__example
+{
+    color: #000;
+    margin-top: 8px;
+}
+
+.search__input
+{
+    margin-left: 0;
+    margin-right: 0;
+    padding: 2px;
+    width: calc(100% - 170px);
+    height: 36px;
+    font-size: 18px;
+    border: 2px solid #ffdb4d;
+    box-sizing: border-box;
+}
+
+.search__button
+{
+    background-color: #ffdb4d;
+    border: 0;
+    text-align: center;
+    text-decoration: none;
+    width: 98px;
+    height: 36px;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 2;
+    box-sizing: border-box;
+}
+
+.search__button,
+.search__button:active,
+.search__button:focus,
+.search__input,
+.search__button:active,
+.search__button:focus
+{
+    outline: none;
+}
+
+.search__button:active
+{
+    background: #ffa500;
+}
+
+.search__button:active ~ .button-after
+{
+    border-left-color: #ffa500;
+}
+
+.button-after
+{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    height: 0;
+    border: 18px solid transparent;
+    border-left: 18px solid #ffdb4d;
+}
+
+.example
+{
+    color: #999;
+}
+
+.example:hover
+{
+    color: #f00;
+}
+
+/* Конец стилей полосы поиска */
+
+.advertisements
+{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.news
+{
+    grid-column: 1/3;
+}
+
+.news__logo
+{
+    width: 14px;
+    height: 14px;
+    margin-right: 2px;
+}
+
+/* Начало стилей для рекламы */
+
+.offer
+{
+    grid-column: 3/4;
+}
+
+.offer__header
+{
+    font-weight: 600;
+    color: #0054b9;
+    width: 180px;
+    margin: 10px 0 8px;
+}
+
+.teaser
+{
+    display: inline-block;
+    font-size: 70%;
+}
+
+.teaser__age
+{
+    display: inline-block;
+    margin-left: 6px;
+    padding: 3px 3px 3px 4px;
+    font-size: 7px;
+    line-height: 1;
+    color: #333;
+    background-color: #f0f0f0;
+}
+
+.offer__header:hover
+{
+    color: #f00;
+    opacity: 1;
+}
+/* Конец стилей для рекламы */
+
+/* Начало стилей для виджета новойстей */
+
+.folder
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.folder__description
+{
+    color: #000;
+    opacity: .4;
+    order: 2;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.slider__control,
+.folder__header
+{
+    font-size: 120%;
+    font-weight: 600;
+    color: #0054b9;
+    cursor: pointer;
+    margin: 0 12px 8px 0;
+    grid-row: 1/2;
+}
+
+.slider__control
+{
+    opacity: .5;
+}
+
+.folder__folding
+{
+    background: url('gray-fold.svg') no-repeat;
+    height: 16px;
+    width: 16px;
+    transform: rotate(360deg);
+}
+
+.folder__folding:hover
+{
+    background: url('black-fold.svg') no-repeat;
+    transform: rotate(360deg);
+}
+
+.slider,
+.slider__input,
+.news__input,
+.news__input:checked ~ .news .news__folded
+{
+    display: none;
+}
+
+.slider__input:checked + .slider__control + .slider__list
+{
+    display: block;
+}
+
+.news__input:checked ~ .offer .offer__header
+{
+    font-size: 120%;
+    width: 200px;
+}
+
+.offer__image
+{
+    height: 60px;
+}
+
+.news__input:checked ~ .offer .offer__image
+{
+    height: 90px;
+}
+
+.news__input:checked ~ .offer .teaser
+{
+    font-size: 81.25%;
+}
+
+.news__input:checked ~ .news .slider
+{
+    grid-column: 1/2;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slider__input:checked + .slider__control
+{
+    opacity: 1;
+}
+
+.news__data
+{
+    opacity: .5;
+    grid-row: 1/2;
+    margin-right: 12px;
+}
+
+.slider__control:hover
+{
+    color: #f00;
+    opacity: 1;
+}
+
+.slider__folding
+{
+    background: url('gray-fold.svg') no-repeat;
+    height: 16px;
+    width: 16px;
+    transform: rotate(180deg);
+}
+
+.slider__folding:hover
+{
+    background: url('black-fold.svg') no-repeat;
+}
+
+.slider__list
+{
+    display: none;
+    padding-left: 0;
+    margin-left: -21px;
+    order: 2;
+    width: 100%;
+}
+
+.slider__list
+{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.list__item
+{
+    list-style-type: none;
+    margin-bottom: 8px;
+}
+
+.list__item:hover
+{
+    color: #f00;
+    opacity: 1;
+}
+
+.exchange-rates
+{
+    order: 3;
+    width: 100%;
+}
+
+.exchange-rates__name
+{
+    font-weight: 600;
+}
+
+.exchange-rates__ratio
+{
+    opacity: .5;
+}
+/* Конец стилей для виджета новойстей */

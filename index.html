@@ -3,7 +3,331 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Главная Яндекса»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <section class="grid-container">
+        <!-- Начало шапки страницы -->
+        <header class="header">
+            <a class="header__link" href="#">Москва</a>
+            <a class="header__link" href="#">Сделать стартовой</a>
+            <a class="header__link" href="https://yandex.ru/legal/confidential/">Конфиденциальность</a>
+        </header>
+        <!-- Конец шапки страницы -->
+
+        <!-- Начало виджета почты -->
+        <input type="checkbox" id="ewv" class="email-visibility">
+        <label for="ewv" class="email-visibility__control"></label>
+        <aside class="email-widget">
+            <section class="email-widget__user user">
+                <header class="user__name">Гоголев Сергей</header>
+                <img class="user__icon icon"
+                     src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-68"
+                     alt="Аватар по умолчанию для пользователей без фото">
+                <section class="icon__border"></section>
+            </section>
+            <section class="email-widget__messages">
+                Почта <span class="messages-status">новых нет</span>
+            </section>
+            <section class="email-widget__toggled toggle">
+                <section class="toggle__write">Написать письмо</section>
+                <section class="toggle__disk">Диск</section>
+            </section>
+        </aside>
+        <!-- Конец виджета почты -->
+
+        <!-- Начало грид-контейнера для новостей и рекламы -->
+        <article class="advertisements">
+            <input type="checkbox" id="input7" class="news__input" checked>
+            <article class="advertisements__news news">
+                <section class="news__folded folder">
+                    <header class="folder__header">Сейчас в СМИ</header>
+                    <section class="folder__description">Актуальные новости и события дня</section>
+                    <section class="exchange-rates">
+                        Курсы ЦБ:
+                        <span class="exchange-rates__name">USD</span> 64.10
+                        <span class="exchange-rates__ratio">+0,13</span>
+                        <span class="exchange-rates__name">EUR</span> 70.44
+                        <span class="exchange-rates__name">НЕФТЬ</span> 62.81
+                        <span class="exchange-rates__ratio">-2,10%</span>
+                    </section>
+                    <label for="input7" class="folder__folding"></label>
+                </section>
+                <section class="news__slider slider">
+                    <input type="radio" name="interested" id="inp1" class="slider__input" checked>
+                    <label for="inp1" class="slider__control">Сейчас в СМИ</label>
+                    <ul class="slider__list list">
+                        <li class="list__item">
+                            <img class="news__logo"
+            src="https://avatars.mds.yandex.net/get-ynews-logo/41096/8352-1506595261741-square/logo-square"
+                                 alt="logo">
+                            Телеканал Discovery озвучил семь версий гибели дятловцев</li>
+                        <li class="list__item">
+                            <img class="news__logo"
+            src="https://avatars.mds.yandex.net/get-ynews-logo/26056/1047-1478692902215-square/logo-square"
+                                 alt="logo">
+                            В Death Stranding появится возмоность увеличить шрифт</li>
+                        <li class="list__item">
+                            <img class="news__logo"
+            src="https://avatars.mds.yandex.net/get-ynews-logo/50744/1013-1496416510291-square/logo-square"
+                                 alt="logo">
+                            Анджей Сапковский высказался в защиту &laquo;Ведьмака&raquo;
+                            от &laquo;Netflix&raquo;</li>
+                        <li class="list__item">
+                            <img class="news__logo"
+            src="https://avatars.mds.yandex.net/get-ynews-logo/26056/1114-1478692903988-square/logo-square"
+                                 alt="logo">
+                            The Stanley Parable: Ultra Deluxe перенесли на 2020 год</li>
+                        <li class="list__item">
+                            <img class="news__logo"
+            src="https://avatars.mds.yandex.net/get-ynews-logo/50744/1013-1496416510291-square/logo-square"
+                                 alt="logo">
+                            Roch Media издаст Poenix Point на PlayStation 4 и Xbox One</li>
+                    </ul>
+                    <input type="radio" name="interested" id="inp2" class="slider__input">
+                    <label for="inp2" class="slider__control">в Москве</label>
+                    <ul class="slider__list list">
+                        <li class="list__item">
+                            <img class="news__logo"
+            src="https://avatars.mds.yandex.net/get-ynews-logo/28627/12224-1530278594010-square/logo-square"
+                                 alt="logo">
+                            Saxo Bank представил &laquo;шикирующие предсказания &raquo;на 2020 год</li>
+                        <li class="list__item">
+                            <img class="news__logo"
+            src="https://avatars.mds.yandex.net/get-ynews-logo/26056/1047-1478692902215-square/logo-square"
+                                 alt="logo">
+                            В Кремле прокомментровали претензии ФБР к российским приложениям</li>
+                        <li class="list__item">
+                            <img class="news__logo"
+            src="https://avatars.mds.yandex.net/get-ynews-logo/135513/1063-1478692902330-square/logo-square"
+                                 alt="logo">
+                            ГИБДД намерена исключить &laquo;прощадку &raquo;из экзамена на права</li>
+                        <li class="list__item">
+                            <img class="news__logo"
+            src="https://avatars.mds.yandex.net/get-ynews-logo/50744/3647-1489657579591-square/logo-square"
+                                 alt="logo">
+                            СКР завершил расследоване крушения SSJ100 в &laquo;Шереметьево&raquo;</li>
+                        <li class="list__item">
+                            <img class="news__logo"
+            src="https://avatars.mds.yandex.net/get-ynews-logo/135513/6455-1478693045091-square/logo-square"
+                                 alt="logo">
+                            В Кремле опровергли сообщеня о допуске малых партий в Госдуму</li>
+                    </ul>
+                    <input type="radio" name="interested" id="inp3" class="slider__input">
+                    <label for="inp3" class="slider__control">Интересное</label>
+                    <ul class="slider__list list">
+                        <li class="list__item">
+                            <img class="news__logo"
+            src="https://avatars.mds.yandex.net/get-ynews-logo/50744/1014-1478692899971-square/logo-square"
+                                 alt="logo">
+                            Путин запустил газопровод &laquo;Сила Сибири&raquo;</li>
+                        <li class="list__item">
+                            <img class="news__logo"
+            src="https://avatars.mds.yandex.net/get-ynews-logo/26056/1047-1478692902215-square/logo-square"
+                                 alt="logo">
+                            Bloomberg: в ОПЕК говорят о конце золотого века сланцевой нефти в США</li>
+                        <li class="list__item">
+                            <img class="news__logo"
+            src="https://avatars.mds.yandex.net/get-ynews-logo/26056/18694-1478693306797-square/logo-square"
+                                 alt="logo">
+                            В Лондоне открывают юбилейный саммит НАТО</li>
+                        <li class="list__item">
+                            <img class="news__logo"
+            src="https://avatars.mds.yandex.net/get-ynews-logo/50744/1014-1478692899971-square/logo-square"
+                                 alt="logo">
+                            Экс-депутата Госдумы Шлегеля отстранили от работы в Германии</li>
+                        <li class="list__item">
+                            <img class="news__logo"
+            src="https://avatars.mds.yandex.net/get-ynews-logo/62808/5292-1478693023327-square/logo-square"
+                                 alt="logo">
+                            США использут курдских боевиков для связи с террористами ИГИЛ в Сирии</li>
+                    </ul>
+                    <section class="exchange-rates">
+                        Курсы ЦБ:
+                        <span class="exchange-rates__name">USD</span> 64.10
+                        <span class="exchange-rates__ratio">+0,13</span>
+                        <span class="exchange-rates__name">EUR</span> 70.44
+                        <span class="exchange-rates__name">НЕФТЬ</span> 62.81
+                        <span class="exchange-rates__ratio">-2,10%</span>
+                    </section>
+                    <section class="news__data">28.11, 12:36</section>
+                    <label for="input7" class="slider__folding"></label>
+                </section>
+            </article>
+            <article class="advertisements__offer offer">
+                <img class="offer__image" alt="Большая иконка рекламы" src="optimize.png">
+                <header class="offer__header ">
+                    Алиса включит радио<br>и подберет вам музыку
+                </header>
+                <section class="offer__teaser teaser">На Яндекс.Станции</section>
+                <section class="teaser__age">0+</section>
+            </article>
+        </article>
+        <!-- Конец грид-контейнера для новостей и рекламы -->
+
+        <!-- Начало логотипа Яндекса -->
+        <section class="yandex-logo">
+            <img
+                src="https://yastatic.net/s3/home-static/_/x/Q/xk8YidkhGjIGOrFm_dL5781YA.svg"
+                alt="Логотип Яндекса">
+        </section>
+        <!-- Конец логотипа Яндекса -->
+
+        <!-- Начало полосы поиска Яндекса -->
+        <section class="search">
+            <nav class="search__nav">
+                <ul class="search-nav-list">
+                    <li class="search-nav-list__item">Видео</li>
+                    <li class="search-nav-list__item">Картинки</li>
+                    <li class="search-nav-list__item">Новости</li>
+                    <li class="search-nav-list__item">Карты</li>
+                    <li class="search-nav-list__item">Маркет</li>
+                    <li class="search-nav-list__item">Переводчик</li>
+                    <li class="search-nav-list__item">Музыка</li>
+                    <li class="search-nav-list__item">Афиша</li>
+                    <li class="search-nav-list__item">ещё</li>
+                </ul>
+            </nav>
+            <input class="search__input" id="input" type="text">
+            <input type="submit" id="button" class="search__button" value="Найти">
+            <label for="button" class="button-after"></label>
+            <section class="search__example">Найдется все.Например,
+                <span class="example">насколько или на сколько</span></section>
+        </section>
+        <!-- Начало полосы поиска Яндекса -->
+
+        <!-- Начало виджетов -->
+        <article class="widgets-list">
+            <article class="weather-widget widget">
+                <header class="widget__header">Погода</header>
+                <input type="checkbox" id="input1" class="widget__input">
+                <label for="input1" class="widget__folding"></label>
+                <section class="widget__folding-text">Прогноз погоды рядом с вами</section>
+                <section class="widget__not-folding-area">
+                    <section class="weather-widget__icon"></section>
+                    <section class="weather-mark">−1°</section>
+                    <section class="weather-description">Вечером 0,<br>ночью-1</section>
+                </section>
+            </article>
+            <article class="traffic-jams-widget widget">
+                <header class="widget__header">Пробки</header>
+                <input type="checkbox" id="input2" class="widget__input">
+                <label for="input2" class="widget__folding"></label>
+                <section class="widget__folding-text">Ситуация на дорогах в вашем городе</section>
+                <section class="widget__not-folding-area">
+                    <section class="traffic-jams-widget__icon"></section>
+                    <section class="traffic-mark">5</section>
+                    <section class="traffic-description">Ближайшие 5 часов движение<br>затруднено</section>
+                </section>
+            </article>
+            <article class="map-widget widget">
+                <header class="widget__header">Карта Москвы</header>
+                <input type="checkbox" id="input3" class="widget__input">
+                <label for="input3" class="widget__folding"></label>
+                <section class="widget__folding-text">Навигация в городе</section>
+                <section class="widget__not-folding-area">
+                    <nav class="map-widget__nav">
+                        <ul class="map-widget-nav-list">
+                            <li class="map-widget-nav-list__item">Метро</li>
+                            <li class="map-widget-nav-list__item">Такси</li>
+                            <li class="map-widget-nav-list__item">Расписания</li>
+                            <li class="map-widget-nav-list__item">Сообщество соседей</li>
+                        </ul>
+                    </nav>
+                </section>
+            </article>
+            <article class="popular-widget widget">
+                <header class="widget__header">Посещаемое</header>
+                <input type="checkbox" id="input4" class="widget__input">
+                <label for="input4" class="widget__folding"></label>
+                <section class="widget__folding-text">Популярные сервисы Яндекса</section>
+                <section class="widget__not-folding-area">
+                    <nav class="popular-widgett__nav">
+                        <ul class="popular-widget-nav-list">
+                            <li class="popular-widget-nav-list__item">
+                                <span class="service">Беру</span> &mdash; pankratov black friday
+                            </li>
+                            <li class="popular-widget-nav-list__item">
+                                <span class="service">Недвижимость</span> &mdash; классический стиль
+                            </li>
+                            <li class="popular-widget-nav-list__item">
+                                <span class="service">Авто.ру</span> &mdash; зимняя резина для авто
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </article>
+            <article class="tv-program-widget widget">
+                <header class="widget__header">Телепрограмма</header>
+                <input type="checkbox" id="input5" class="widget__input">
+                <label for="input5" class="widget__folding"></label>
+                <section class="widget__folding-text">Программа передач по каналам</section>
+                <section class="widget__not-folding-area">
+                    <nav class="tv-program-widget__nav">
+                        <ul class="tv-program-widget-nav-list">
+                            <li class="tv-program-widget-nav-list__item">
+                                <span class="time">12:25</span> &laquo;Игра в бисер&raquo;	 с...
+                                <span class="chanel">Культура</span>
+                            </li>
+                            <li class="tv-program-widget-nav-list__item">
+                                    <span class="time">12:30</span> Новости <span class="chanel">РЕН-ТВ</span>
+                            </li>
+                            <li class="tv-program-widget-nav-list__item">
+                                <span class="time">12:30</span> Спаси свою любовь
+                                <span class="chanel">ТНТ</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </article>
+            <article class="ether-widget widget">
+                <input type="checkbox" id="input6" class="widget__input ether">
+                <header class="ether-widget__header widget__header">
+                    Эфир <span class="tv-type">Фильмы Сериалы</span>
+                </header>
+                <header class="hidden-ether-widget__header widget__header">
+                    Сейчас в эфире
+                </header>
+                <label for="input6" class="widget__folding"></label>
+                <section class="widget__folding-text">Эфир любимых каналов</section>
+                <section class="widget__not-folding-area">
+                    <nav class="tv-program-widget__nav">
+                        <ul class="tv-program-widget-nav-list">
+                            <li class="tv-program-widget-nav-list__item either-list-item">
+                                Малые реки Чернозе... <span class="chanel">Охотник и рыболов</span>
+                            </li>
+                            <li class="tv-program-widget-nav-list__item either-list-item">
+                                События <span class="chanel">ОТВ 24</span>
+                            </li>
+                            <li class="tv-program-widget-nav-list__item either-list-item">
+                                Особое мнение // Повтор <span class="chanel">Эхо Москвы</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </article>
+        </article>
+        <!-- Конец виджетов -->
+
+        <!-- Начало футера страницы -->
+        <footer class="footer">
+            <nav class="footer__nav">
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-list__item">Директ</li>
+                    <li class="footer-nav-list__item">Метрика</li>
+                    <li class="footer-nav-list__item">Реклама</li>
+                    <li class="footer-nav-list__item">Касса</li>
+                    <li class="footer-nav-list__item">Вакансии</li>
+                    <li class="footer-nav-list__item">Блог</li>
+                    <li class="footer-nav-list__item">Компания</li>
+                    <li class="footer-nav-list__item">About</li>
+                    <li class="footer-nav-list__item">Конфиденциальность</li>
+                    <li class="footer-nav-list__item">Пользовательское соглашение</li>
+                </ul>
+            </nav>
+            <aside class="footer__copyright">&copy;Яндекс</aside>
+        </footer>
+        <!-- Конец футера страницы -->
+    </section>
 </body>
 </html>
