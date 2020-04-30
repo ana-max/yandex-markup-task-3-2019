@@ -41,7 +41,7 @@ body
 .header__link:first-of-type::before
 {
     content: '';
-    background: url('black-plane.svg') no-repeat;
+    background: url('images/black-plane.svg') no-repeat;
     width: 16px;
     height: 16px;
     margin-top: -2px;
@@ -50,7 +50,7 @@ body
 
 .header__link:first-of-type:hover::before
 {
-    background: url('red-plane.svg') no-repeat;
+    background: url('images/red-plane.svg') no-repeat;
 }
 
 .header__link:last-of-type
@@ -281,12 +281,12 @@ body
 
 .traffic-jams-widget__icon
 {
-    background: url('jams.svg') no-repeat;
+    background: url('images/jams.svg') no-repeat;
 }
 
 .weather-widget__icon
 {
-    background: url('weather-icon.svg') no-repeat;
+    background: url('images/weather-icon.svg') no-repeat;
 }
 
 .traffic-mark,
@@ -315,7 +315,7 @@ body
 .widget__folding
 {
     display: inline-flex;
-    background: url('gray-fold.svg') no-repeat;
+    background: url('images/gray-fold.svg') no-repeat;
     height: 16px;
     width: 16px;
     transform: rotate(180deg);
@@ -336,7 +336,7 @@ body
 
 .widget__folding:hover
 {
-    background: url('black-fold.svg') no-repeat;
+    background: url('images/black-fold.svg') no-repeat;
 }
 
 .map-widget-nav-list
@@ -383,7 +383,7 @@ body
 {
     content: '';
     display: inline-block;
-    background: url('ether.svg') no-repeat;
+    background: url('images/ether.svg') no-repeat;
     width: 13px;
     height: 13px;
     margin-left: -13px;
@@ -487,7 +487,7 @@ body
 
 .search__input
 {
-    background: url('microvawe.svg') no-repeat calc(100% - 45px) 5px, #fff url('keyboard.svg') no-repeat calc(100% - 10px) 10px;
+    background: url('images/microvawe.svg') no-repeat calc(100% - 45px) 5px, #fff url('images/keyboard.svg') no-repeat calc(100% - 10px) 10px;
     width: 30px;
     height: 24px;
 }
@@ -677,7 +677,7 @@ body
 
 .folder__folding
 {
-    background: url('gray-fold.svg') no-repeat;
+    background: url('images/gray-fold.svg') no-repeat;
     height: 16px;
     width: 16px;
     transform: rotate(360deg);
@@ -685,7 +685,7 @@ body
 
 .folder__folding:hover
 {
-    background: url('black-fold.svg') no-repeat;
+    background: url('images/black-fold.svg') no-repeat;
     transform: rotate(360deg);
 }
 
@@ -750,7 +750,7 @@ body
 
 .slider__folding
 {
-    background: url('gray-fold.svg') no-repeat;
+    background: url('images/gray-fold.svg') no-repeat;
     height: 16px;
     width: 16px;
     transform: rotate(180deg);
@@ -758,7 +758,7 @@ body
 
 .slider__folding:hover
 {
-    background: url('black-fold.svg') no-repeat;
+    background: url('images/black-fold.svg') no-repeat;
 }
 
 .slider__list
